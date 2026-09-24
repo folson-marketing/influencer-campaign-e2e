@@ -3,6 +3,8 @@ name: influencer-campaign-e2e
 description: 红人营销 Campaign 全流程（E2E）：找红人、评估打分、生成并发送外联邮件、合作管理、效果追踪、跟进、复投，并建立红人资源库。Use for any end-to-end influencer/KOL campaign.
 ---
 
+> 这是 Skill 的中文原版，仅供阅读参考。实际加载的 Skill 是 `skills/influencer-campaign-e2e/SKILL.md`（英文版），修改时请同步两个版本。
+
 # 红人营销 Campaign 全流程 / Influencer Campaign E2E
 
 把一次红人营销从头跑到尾，并把所有红人沉淀进可复用的资源库（Creator Library）。

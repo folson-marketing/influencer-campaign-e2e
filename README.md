@@ -1,8 +1,8 @@
 # Influencer Campaign E2E / 红人营销全流程 Skill
 
-A Claude skill by **Folson Marketing** that runs an influencer (KOL) campaign end to end and builds a reusable creator library.
+An agent skill by **Folson Marketing** that runs an influencer (KOL) campaign end to end and builds a reusable creator library. It uses the open [Agent Skills](https://agentskills.io) format (`SKILL.md`), so it works in Claude and other agents that support skills.
 
-一个由 **Folson Marketing** 出品的 Claude Skill：把红人营销从头到尾跑完，并沉淀成可复用的红人资源库。
+一个由 **Folson Marketing** 出品的 Agent Skill：把红人营销从头到尾跑完，并沉淀成可复用的红人资源库。采用开放的 Agent Skills 格式（`SKILL.md`），可在 Claude 及其他支持 Skills 的 Agent 中使用。
 
 ## 流程 / Workflow
 
@@ -26,12 +26,58 @@ A Claude skill by **Folson Marketing** that runs an influencer (KOL) campaign en
 - **邮件 Email**：Gmail · Outlook / Microsoft 365
 
 缺哪个连接器，Skill 都会提示你安装；你也可以选择改用浏览器，或者先导出文件再导入。
+If a connector is missing, the skill tells you how to install it, or falls back to a browser or file import.
 
 ## 安装 / Install
 
-1. Download this repo as a ZIP (or copy the folder containing `SKILL.md`).
-2. In Claude, go to **Settings → Capabilities → Skills** and upload it.
-3. Say 「开始一个红人营销 Campaign」 or "start an influencer campaign".
+### Claude.ai / Claude 桌面端 Desktop
+
+1. Download this repo as a ZIP and unzip it. 下载本仓库 ZIP 并解压。
+2. Zip the `skills/influencer-campaign-e2e/` folder on its own. 单独把 `skills/influencer-campaign-e2e/` 文件夹压缩成 ZIP。
+3. In Claude, go to **Settings → Capabilities → Skills** and upload that ZIP. 在 Claude 的 **设置 → 功能 → Skills** 上传该 ZIP。
+
+### Claude Code
+
+As a plugin (recommended, easy to update) / 作为插件安装（推荐，方便更新）:
+
+```
+/plugin marketplace add folson-marketing/influencer-campaign-e2e
+/plugin install influencer-campaign-e2e@folson-marketing
+```
+
+Or copy the skill folder manually / 或手动复制：
+
+```bash
+git clone https://github.com/folson-marketing/influencer-campaign-e2e.git
+cp -r influencer-campaign-e2e/skills/influencer-campaign-e2e ~/.claude/skills/
+```
+
+### Other agents (Codex, etc.) / 其他 Agent
+
+Copy `skills/influencer-campaign-e2e/` into that agent's skills directory (for Codex: `~/.codex/skills/`). Check your agent's docs for the exact path.
+把 `skills/influencer-campaign-e2e/` 复制到对应 Agent 的 skills 目录（Codex 为 `~/.codex/skills/`），具体路径以该 Agent 文档为准。
+
+### ChatGPT custom GPTs / ChatGPT 自定义 GPT
+
+Custom GPTs don't load `SKILL.md` folders directly. Paste `SKILL.md` into the GPT's instructions and upload the `references/` files as knowledge. Email and spreadsheet steps then need GPT Actions or fall back to copy-paste.
+自定义 GPT 不能直接加载 Skill 文件夹：把 `SKILL.md` 粘贴到 GPT 指令中，把 `references/` 里的文件作为知识库上传；邮件和表格操作需要配置 Actions，否则会改为输出文本让你手动操作。
+
+### 开始使用 / Start
+
+Say "start an influencer campaign" or 「开始一个红人营销 Campaign」.
+
+## 仓库结构 / Repo layout
+
+```
+.claude-plugin/            Claude Code plugin + marketplace manifests
+skills/influencer-campaign-e2e/
+  SKILL.md                 the skill (English; replies in the user's language)
+  references/              setup, schema, scoring, outreach — loaded on demand
+docs/SKILL.zh-CN.md        中文原版 Skill（供阅读参考，Agent 不会加载）
+```
+
+The skill is written in English for the widest agent compatibility, and it talks to you in your language. The Chinese original is kept in `docs/` for Chinese-speaking maintainers. When you change the skill, update both.
+Skill 正文用英文编写以兼容更多 Agent，对话时会跟随你的语言。中文原版保存在 `docs/`，修改 Skill 时请同步更新两个版本。
 
 ## Guardrails
 
