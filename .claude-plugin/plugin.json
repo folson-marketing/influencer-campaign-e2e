@@ -1,0 +1,10 @@
+{
+  "name": "influencer-campaign-e2e",
+  "description": "Run an influencer / KOL campaign end to end and build a reusable creator library.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Folson Marketing"
+  },
+  "repository": "https://github.com/folson-marketing/influencer-campaign-e2e",
+  "license": "MIT"
+}

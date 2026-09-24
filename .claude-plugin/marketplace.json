@@ -1,0 +1,16 @@
+{
+  "name": "folson-marketing",
+  "owner": {
+    "name": "Folson Marketing"
+  },
+  "metadata": {
+    "description": "Marketing skills by Folson Marketing."
+  },
+  "plugins": [
+    {
+      "name": "influencer-campaign-e2e",
+      "source": "./",
+      "description": "Run an influencer / KOL campaign end to end and build a reusable creator library."
+    }
+  ]
+}
