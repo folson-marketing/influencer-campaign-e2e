@@ -1,16 +1,23 @@
 {
   "name": "folson-marketing",
-  "owner": {
-    "name": "Folson Marketing"
-  },
-  "metadata": {
-    "description": "Marketing skills by Folson Marketing."
-  },
+  "owner": { "name": "Folson Marketing" },
+  "metadata": { "description": "Marketing skills by Folson Marketing." },
   "plugins": [
     {
       "name": "influencer-campaign-e2e",
       "source": "./",
-      "description": "Run an influencer / KOL campaign end to end and build a reusable creator library."
+      "strict": false,
+      "version": "1.1.0",
+      "description": "Run an influencer / creator campaign end to end and build a reusable creator library (English edition).",
+      "skills": ["./skills/influencer-campaign-e2e"]
+    },
+    {
+      "name": "influencer-campaign-e2e-zh",
+      "source": "./",
+      "strict": false,
+      "version": "1.1.0",
+      "description": "红人营销 Campaign 全流程，并沉淀可复用的红人资源库（中文版）。",
+      "skills": ["./skills/influencer-campaign-e2e-zh"]
     }
   ]
 }

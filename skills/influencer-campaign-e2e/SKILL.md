@@ -7,7 +7,7 @@ description: Run an influencer / creator marketing campaign end to end — disco
 
 Run an influencer campaign from brief to wrap-up, and keep every creator in a reusable **Creator Library**. The workflow has 9 stages. Every stage reads and writes the same database, so a campaign can be paused at any point and resumed in a later session.
 
-This is the English edition: instructions, database fields and email templates are in English. Write outreach to non-English-speaking creators by adapting the English templates to the creator's language.
+This is the English edition, for English-speaking teams: instructions, database fields and email templates are in English. Write outreach to non-English-speaking creators by adapting the English templates to the creator's language. A Chinese edition for Chinese-speaking teams is available as `influencer-campaign-e2e-zh`.
 
 ## Tools: use capabilities, not fixed tool names
 
