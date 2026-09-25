@@ -1,6 +1,6 @@
 # Scoring rubric
 
-Score each candidate 0–100 and record the reasoning next to the score.
+Score each candidate 0–100. Record the total, the per-dimension breakdown (`Score Breakdown`) and the reasoning.
 
 | Dimension | Weight | What to look at |
 |---|---|---|
@@ -37,4 +37,4 @@ Deduct points and explain in the notes when you see any of these:
 - **B**: 60–74
 - **C**: below 60 (not contacted by default)
 
-Show the ranked shortlist to the user. After they confirm, set Stage = `已入选 Shortlisted`.
+Show the ranked shortlist to the user. After they confirm, set Stage = `Shortlisted`.

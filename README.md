@@ -64,22 +64,23 @@ Custom GPTs don't load `SKILL.md` folders directly. Paste `SKILL.md` into the GP
 
 ### 开始使用 / Start
 
-Say "start an influencer campaign" or 「开始一个红人营销 Campaign」.
+Say "start an influencer campaign".
 
 ## 仓库结构 / Repo layout
 
 ```
 .claude-plugin/            Claude Code plugin + marketplace manifests
 skills/influencer-campaign-e2e/
-  SKILL.md                 the skill (English; replies in the user's language)
-  references/              setup, schema, scoring, outreach — loaded on demand
-docs/SKILL.zh-CN.md        中文原版 Skill（供阅读参考，Agent 不会加载）
+  SKILL.md                 the skill (English edition)
+  references/              data integrity, setup, schema, scoring, outreach — loaded on demand
+docs/SKILL.zh-CN.md        中文原始草稿（仅供参考，Agent 不会加载）
 ```
 
-The skill is written in English for the widest agent compatibility, and it talks to you in your language. The Chinese original is kept in `docs/` for Chinese-speaking maintainers. When you change the skill, update both.
-Skill 正文用英文编写以兼容更多 Agent，对话时会跟随你的语言。中文原版保存在 `docs/`，修改 Skill 时请同步更新两个版本。
+`skills/influencer-campaign-e2e/` is the **English edition**: instructions, database fields, stage names and email templates are all in English. `docs/SKILL.zh-CN.md` is the original Chinese draft, kept for reference only. It predates the data-integrity rules and the English edition's field names.
+`skills/influencer-campaign-e2e/` 是 **英文版**：说明、数据库字段、阶段名称和邮件模板均为英文。`docs/SKILL.zh-CN.md` 是最初的中文草稿，仅供参考，不包含数据完整性规则，字段名也与英文版不同。
 
 ## Guardrails
 
 - 不经你确认，Skill 不会发邮件、不会下单、也不会付款。Never sends, orders or pays without your confirmation.
 - 只采集公开数据；邮件符合 CASL / CAN-SPAM。Public data only; CASL / CAN-SPAM friendly.
+- 写入后回读校验，估算值明确标注，数据来源和搜索词全程公开。Every write is re-read and checked, estimates are labelled inline, and data sources and search terms are always stated.

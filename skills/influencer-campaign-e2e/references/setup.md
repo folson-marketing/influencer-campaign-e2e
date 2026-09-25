@@ -6,7 +6,7 @@
 |---|---|---|
 | Local Excel (`.xlsx`) | Solo use, data stays on the user's machine | Access to the user's files, or a file generated for download |
 | Google Sheets | English-speaking teams, collaboration | Google Drive / Sheets tools |
-| Lark (Feishu) Bitable 飞书多维表格 | Chinese-speaking teams, kanban views and automations | Lark / Feishu tools, or a browser |
+| Lark (Feishu) Bitable | Teams on Lark / Feishu, kanban views and automations | Lark / Feishu tools, or a browser |
 
 After the user picks one, check that the capability exists. If it's missing, tell the user how to add it and let them choose: **install**, **use a different option**, or **use a browser / file import**.
 
