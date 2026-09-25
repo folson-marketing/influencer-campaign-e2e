@@ -9,9 +9,9 @@ An agent skill by **Folson Marketing** that runs an influencer (KOL) campaign en
 | | English edition | 中文版 |
 |---|---|---|
 | Skill | `influencer-campaign-e2e` | `influencer-campaign-e2e-zh` |
-| For | English-speaking teams | 中文团队 |
-| Language | English instructions, fields and templates | 中文说明、双语字段、中文模板为主 |
-| Platforms | TikTok, Instagram, YouTube first | 小红书、抖音、B站、微博、视频号 + 海外平台 |
+| For | English-speaking teams | 中文团队（出海 / 跨境电商品牌） |
+| Language | English instructions, fields and templates | 中文说明、双语字段；外联文案英文，附中文翻译 |
+| Platforms | TikTok, Instagram, YouTube | TikTok、Instagram、YouTube（海外平台） |
 | Database | Google Sheets / Excel first | 飞书多维表格优先 |
 
 Both editions share the same workflow, guardrails and data-integrity rules. **Install one edition per team**; installing both means either one may answer a request.

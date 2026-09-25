@@ -8,7 +8,7 @@
 
 跨 Campaign 长期积累，一个红人一行，按平台 + 账号去重。
 
-`Creator ID` · `平台 Platform` · `账号 Handle` · `主页链接 Profile URL` · `昵称 Name` · `国家/城市 Location` · `语言 Language` · `垂类 Niche` · `粉丝数 Followers` · `平均播放 Avg Views` · `互动率 ER%` · `互动率算法 ER Method` · `近30天发帖数 Posts/30d` · `受众画像 Audience`（性别 / 年龄 / 地区，能拿到才填）· `邮箱 Email` · `微信/其他联系方式 Other Contact` · `MCN/经纪 Agency` · `报价 Rate`（按内容形式）· `评分 Score` · `各维度得分 Score Breakdown` · `分级 Tier (A/B/C)` · `标签 Tags` · `合作次数 # Collabs` · `历史 ROI` · `最近联系 Last Contacted` · `黑名单 Blacklist (Y/N + 原因)` · `数据来源 Source` · `搜索词 Search Query` · `数据可信度 Data Confidence`（已核实 / 估算 / 替代指标）· `风险提示 Flags` · `更新时间 Updated`
+`Creator ID` · `平台 Platform` · `账号 Handle` · `主页链接 Profile URL` · `昵称 Name` · `国家/城市 Location` · `语言 Language` · `垂类 Niche` · `粉丝数 Followers` · `平均播放 Avg Views` · `互动率 ER%` · `互动率算法 ER Method` · `近30天发帖数 Posts/30d` · `受众画像 Audience`（性别 / 年龄 / 地区，能拿到才填）· `邮箱 Email` · `其他联系方式 Other Contact` · `MCN/经纪 Agency` · `报价 Rate`（按内容形式）· `评分 Score` · `各维度得分 Score Breakdown` · `分级 Tier (A/B/C)` · `标签 Tags` · `合作次数 # Collabs` · `历史 ROI` · `最近联系 Last Contacted` · `黑名单 Blacklist (Y/N + 原因)` · `数据来源 Source` · `搜索词 Search Query` · `数据可信度 Data Confidence`（已核实 / 估算 / 替代指标）· `风险提示 Flags` · `更新时间 Updated`
 
 ## 表 2：活动 Campaigns
 

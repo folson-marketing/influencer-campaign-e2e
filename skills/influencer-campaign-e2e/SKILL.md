@@ -55,7 +55,7 @@ Finish each stage with:
 Do this for every new campaign. For an existing campaign, read the config first.
 
 1. **Existing config?** If the user gives a database link or file, read its `_Config` table (database type, links, sender mailbox, brand info) and jump to the stage they want.
-2. **Collect the brief** in one round of questions: brand / product and landing page URL; goal (awareness, sales, UGC, sign-ups); target market and language; platforms (TikTok, Instagram, YouTube, Xiaohongshu, other); creator tier (Nano 1k–10k, Micro 10k–100k, Mid 100k–500k, Macro 500k+); deal type (gifting, flat fee, affiliate, hybrid); total budget, per-creator cap, number of creators, go-live window; content requirements (must-say points, banned words, review needed, paid-usage rights).
+2. **Collect the brief** in one round of questions: brand / product and landing page URL; goal (awareness, sales, UGC, sign-ups); target market and language; platforms (TikTok, Instagram, YouTube, other); creator tier (Nano 1k–10k, Micro 10k–100k, Mid 100k–500k, Macro 500k+); deal type (gifting, flat fee, affiliate, hybrid); total budget, per-creator cap, number of creators, go-live window; content requirements (must-say points, banned words, review needed, paid-usage rights).
 3. **Choose the database**: local Excel, Google Sheets or Lark Bitable. Check the matching capability and handle gaps as above. Details: `references/setup.md`.
 4. **Choose the creator data source**: Apify by default. Details: `references/setup.md`.
 5. **Create the schema** from `references/schema.md`. If tables already exist, only add missing fields; never overwrite.
