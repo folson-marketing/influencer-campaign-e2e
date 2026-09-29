@@ -22,7 +22,7 @@ Both editions share the same workflow, guardrails and data-integrity rules. **In
 | # | 阶段 | Stage |
 |---|---|---|
 | 0 | 初始化：Brief、选数据库、选数据源 | Setup |
-| 1 | 找红人 | Discover |
+| 1 | 找红人（给出品牌名时，扫描该品牌相关的所有红人和内容） | Discover (brand scan: every creator and post related to a given brand) |
 | 2 | 评估打分（0–100，A/B/C 分级） | Evaluate & Score |
 | 3 | 生成个性化外联邮件（中 / 英） | Draft Outreach |
 | 4 | 发送邮件（Gmail / Outlook，默认草稿） | Send |

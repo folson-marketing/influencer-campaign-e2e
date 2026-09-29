@@ -22,7 +22,13 @@ Campaign × Creator. One row per collaboration.
 
 `Campaign ID` · `Creator ID` · `Post URL` · `Posted` · `Views` · `Likes` · `Comments` · `Shares/Saves` · `Clicks` · `Conversions` · `Revenue` · `Cost` · `CPM` · `CPE` · `CPA` · `ROAS` · `Source` · `Data Confidence` · `Snapshot Date` (one snapshot each at day 3, 7 and 30 after posting)
 
-## Table 5: _Config
+## Table 5: Brand Mentions
+
+Every post found by a brand scan (`references/brand-scan.md`). One row per post, deduplicated on Post URL.
+
+`Brand` · `Creator ID` · `Platform` · `Handle` · `Post URL` · `Posted` · `Mention Type` (Paid partnership / Affiliate / Gifted / Organic / Brand repost) · `Evidence` (the label, tag, hashtag, code or quote that shows the link) · `Caption Excerpt` · `Views` · `Likes` · `Comments` · `Shares/Saves` · `Discount Code` · `Source` · `Search Query` · `Data Confidence` · `Found On` (date of the scan)
+
+## Table 6: _Config
 
 Database type, links to each table, creator data source, sender mailbox, email signature, one-line brand description, and campaign defaults.
 

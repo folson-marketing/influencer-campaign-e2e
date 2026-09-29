@@ -24,7 +24,13 @@ Campaign × 红人，一次合作一行。
 
 `Campaign ID` · `Creator ID` · `帖子链接 Post URL` · `发布日期 Posted` · `播放/曝光 Views` · `点赞 Likes` · `评论 Comments` · `分享/收藏 Shares/Saves` · `点击 Clicks` · `订单/转化 Conversions` · `销售额 Revenue` · `费用 Cost` · `CPM` · `CPE` · `CPA` · `ROAS` · `数据来源 Source` · `数据可信度 Data Confidence` · `采集时间 Snapshot Date`（发布后第 3 / 7 / 30 天各记一次）
 
-## 表 5：配置 _Config
+## 表 5：品牌相关内容 Brand Mentions
+
+品牌扫描（`references/brand-scan.md`）找到的每条内容。一条内容一行，按帖子链接去重。
+
+`品牌 Brand` · `Creator ID` · `平台 Platform` · `账号 Handle` · `帖子链接 Post URL` · `发布日期 Posted` · `提及类型 Mention Type`（付费合作 / 联盟 / 寄样 / 自然提及 / 品牌转发）· `证据 Evidence`（能说明关联的标签、标记、话题、折扣码或原文）· `文案摘录 Caption Excerpt` · `播放/曝光 Views` · `点赞 Likes` · `评论 Comments` · `分享/收藏 Shares/Saves` · `折扣码 Discount Code` · `数据来源 Source` · `搜索词 Search Query` · `数据可信度 Data Confidence` · `采集日期 Found On`（扫描日期）
+
+## 表 6：配置 _Config
 
 数据库类型、各表链接、红人数据源、发件邮箱、签名、品牌一句话介绍、Campaign 默认参数。
 
