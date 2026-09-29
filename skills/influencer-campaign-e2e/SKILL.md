@@ -1,6 +1,6 @@
 ---
 name: influencer-campaign-e2e
-description: Run an influencer / creator marketing campaign end to end — discover creators, score them, draft and send personalized outreach, follow up, manage collaborations (negotiation, briefs, UTM links, product seeding, content review), track performance (CPM / CPE / CPA / ROAS), re-engage top performers, and maintain a reusable creator library in Excel, Google Sheets or Lark Bitable. Use for any influencer, creator or KOL campaign, influencer outreach, or creator-database task.
+description: Run an influencer / creator marketing campaign end to end — discover creators (including every creator and post related to a given brand or competitor), score them, draft and send personalized outreach, follow up, manage collaborations (negotiation, briefs, UTM links, product seeding, content review), track performance (CPM / CPE / CPA / ROAS), re-engage top performers, and maintain a reusable creator library in Excel, Google Sheets or Lark Bitable. Use for any influencer, creator or KOL campaign, influencer outreach, or creator-database task.
 ---
 
 # Influencer Campaign E2E
@@ -59,19 +59,21 @@ Do this for every new campaign. For an existing campaign, read the config first.
 3. **Choose the database**: local Excel, Google Sheets or Lark Bitable. Check the matching capability and handle gaps as above. Details: `references/setup.md`.
 4. **Choose the creator data source**: Apify by default. Details: `references/setup.md`.
 5. **Create the schema** from `references/schema.md`. If tables already exist, only add missing fields; never overwrite.
+6. **Brand given?** Once the database is ready, run a brand scan (Stage 1, step 1) for the user's brand and any competitor they name.
 
 ## Stage 1 — Discover
 
-1. **Library first.** Filter Creators by niche, platform, Tier A/B, not blacklisted, and not contacted in the last 60 days. Reuse these before sourcing new people.
-2. **Source new creators with Apify** (or another creator-data tool):
+1. **Brand scan (whenever the user gives a brand name).** For the user's own brand or a named competitor, find every creator and post related to that brand: paid-partnership labels, tagged posts, @mentions, branded hashtags, keyword mentions, discount codes and affiliate links. Search until results run out, classify each post (paid, affiliate, gifted, organic, brand repost) and save everything: posts to Brand Mentions, creators to Creators. Full steps: `references/brand-scan.md`.
+2. **Library first.** Filter Creators by niche, platform, Tier A/B, not blacklisted, and not contacted in the last 60 days. Reuse these before sourcing new people.
+3. **Source new creators with Apify** (or another creator-data tool):
    - Search for well-rated, maintained actors per platform (profile, hashtag and search scrapers) and read each actor's input schema before running it. Don't hard-code actor names.
    - Search with category keywords + hashtags + competitor brand names (creators who've posted for competitors) + target region.
    - **Before each run, tell the user the actor and the exact search terms.**
    - Run a small batch first (20–50 results per keyword) to check data quality and cost, then tell the user the estimated cost before scaling up.
    - Extract: handle, followers, views and engagement on the last 10–20 posts, and email / link-in-bio from the profile.
-3. **Browser fallback:** open profiles from platform search and hashtag pages and read the same fields. Tell the user this is slower; aim for 20–30 candidates per run.
-4. Run the data-integrity checks, then write to Creators (dedupe on platform + handle; update existing rows) and Pipeline (Stage = `Sourced`). Re-read what you wrote.
-5. Show the results: profile cards for the top candidates, a compact table for the rest.
+4. **Browser fallback:** open profiles from platform search and hashtag pages and read the same fields. Tell the user this is slower; aim for 20–30 candidates per run.
+5. Run the data-integrity checks, then write to Creators (dedupe on platform + handle; update existing rows) and Pipeline (Stage = `Sourced`). Re-read what you wrote.
+6. Show the results: profile cards for the top candidates, a compact table for the rest.
 
 ## Stage 2 — Evaluate & score
 
@@ -147,6 +149,7 @@ When the user just says "run the influencer campaign" or similar:
 Read these when the stage needs them:
 - `references/data-integrity.md` — write checks, estimate labelling, sanity-check thresholds
 - `references/setup.md` — database backends, creator data sources, and how to install each one
-- `references/schema.md` — the five tables and the Pipeline stage state machine
+- `references/brand-scan.md` — finding and saving every creator and post related to a brand
+- `references/schema.md` — the six tables and the Pipeline stage state machine
 - `references/scoring.md` — scoring rubric, engagement benchmarks, fake-follower signals
 - `references/outreach.md` — email rules, templates, DM version, follow-ups
